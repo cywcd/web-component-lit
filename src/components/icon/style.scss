@@ -1,0 +1,171 @@
+@import '../theme/common/utils.scss';
+@import '../theme/common/var.scss';
+
+$fontfamily: '#{$project}-icon';
+$fontfamilylovely: '#{$project}-icon-lovely';
+$fontfamilypopular: '#{$project}-icon-popular';
+
+@font-face {
+  font-family: $fontfamily; /* Project id 4640497 */
+  src: url('//at.alicdn.com/t/c/font_4640497_oh5e10g7swf.woff2?t=1722501892253')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_4640497_oh5e10g7swf.woff?t=1722501892253')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_4640497_oh5e10g7swf.ttf?t=1722501892253')
+      format('truetype');
+}
+
+@font-face {
+  font-family: $fontfamilylovely; /* Project id 2914379 */
+  src: url('//at.alicdn.com/t/c/font_2914379_abca1akhv1o.woff2?t=1661930836565')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_2914379_abca1akhv1o.woff?t=1661930836565')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_2914379_abca1akhv1o.ttf?t=1661930836565')
+      format('truetype');
+}
+
+@font-face {
+  font-family: $fontfamilypopular; /* Project id 2914381 */
+  src: url('//at.alicdn.com/t/c/font_2914381_3wmammyd5bl.woff2?t=1661930832349')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_2914381_3wmammyd5bl.woff?t=1661930832349')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_2914381_3wmammyd5bl.ttf?t=1661930832349')
+      format('truetype');
+}
+
+$icon-family: var(--icon-family, $fontfamily);
+$protected-icon-family: var(--protected-icon-family, $icon-family);
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+$icon: '#{$project}-icon';
+
+.#{$icon}-base {
+  $protected-icon-color: var(--protected-icon-color, $icon-color);
+  $protected-icon-font-size: var(--protected-icon-font-size, $icon-font-size);
+
+  color: $protected-icon-color;
+  font-size: $protected-icon-font-size;
+
+  &-spin {
+    animation: spin 1s linear infinite;
+  }
+}
+
+.#{$icon} {
+  $protected-icon-display: var(--protected-icon-display, $icon-display);
+  $protected-icon-line-height: var(
+    --protected-icon-line-height,
+    $icon-line-height
+  );
+
+  display: $protected-icon-display;
+  position: relative;
+
+  font-family: $protected-icon-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  line-height: $protected-icon-line-height;
+
+  &-add:before {
+    content: '\e694';
+  }
+
+  &-cloud_download:before {
+    content: '\e687';
+  }
+
+  &-check_circle:before { 
+    content: '\e682';
+  }
+
+  &-close:before {
+    content: '\e680';
+  }
+
+  &-minus_circle:before {
+    content: '\e681';
+  }
+
+  &-ellipsis:before {
+    content: '\e670';
+  }
+
+  &-error_circle:before {
+    content: '\e669';
+  }
+
+  &-question_circle:before {
+    content: '\e655';
+  }
+
+  &-time:before {
+    content: '\e660';
+  }
+
+  &-warning:before {
+    content: '\e665';
+  }
+
+  &-prompt_circle:before {
+    content: '\e653';
+  }
+
+  &-search:before {
+    content: '\e668';
+  }
+
+  &-setting:before {
+    content: '\e64b';
+  }
+
+  &-size:before {
+    content: '\e659';
+  }
+
+  &-outdent:before {
+    content: '\e6b1';
+  }
+
+  &-unorderedlist:before {
+    content: '\e6bd';
+  }
+
+  &-add_circle_o:before {
+    content: '\e686';
+  }
+
+  &-cancel_circle_o:before {
+    content: '\e67f';
+  }
+
+  &-check_circle_o:before {
+    content: '\e677';
+  }
+
+  &-error_circle_o:before {
+    content: '\e672';
+  }
+
+  &-warning_o:before {
+    content: '\e66e';
+  }
+
+  &-prompt_circle_o:before {
+    content: '\e65d';
+  }
+
+  &-question_circle_o:before {
+    content: '\e64d';
+  }
+}

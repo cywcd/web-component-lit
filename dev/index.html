@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>&lt;my-element> Demo</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../node_modules/lit/polyfill-support.js"></script>
+    <!-- <script src="../lib/umd/index.umd.js"></script> -->
+    <script type="module">
+      // import '../lib/esm/index.js';
+      import '../lib/umd/index.umd.js';
+    </script>
+    <script>
+      function openDialog() {
+        // const elDialog = document.querySelector('[data-class="test-dialog"]');
+        // elDialog.open = true;
+        // const elDialog = document.querySelector('[data-class="test-dialog"]');
+        // elDialog.open = true;
+        console.log(window, '--openDialog-window');
+        const ycDialog = window.yssWebC.$ycDialog;
+        ycDialog.confirm({
+          title: "米好",
+          content: "hello mihao"
+        });
+      }
+    </script>
+    <style>
+      p {
+        border: solid 1px blue;
+        padding: 8px;
+      }
+      :root {
+        --themeColor: #3371ff;
+      }
+    </style>
+  </head>
+  <body>
+    <yc-button  icon='search' style='margin:5px;' block type='primary' checked> <span>确定</span></yc-button>
+    <yc-button icon='search'  href='http://wwww.baidu.com' disabled> <span>Tips 01Tips 01Tips 01</span></yc-button>
+    <yc-button onclick="openDialog()">打开弹窗</span></yc-button>
+    <yc-button  icon='search'  shape='circle' checked></yc-button>
+    <yc-button  icon='search' disabled type='danger' > <span>确定</span></yc-button>
+    <yc-dialog type="confirm" data-class="test-dialog" :open="false" okText="确定" cancelText="取消" yc-title="提示">我是自定义内容提示</yc-dialog>
+    <yc-input name="userName" type="text"></yc-input>
+    <yc-icon name="add" size="30" color="#f60"></yc-icon>
+  </body>
+</html>
