@@ -7,7 +7,7 @@ const appliedClassMixins = new WeakMap<Constructor, unknown>();
  * @returns {boolean}
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function wasMixinPreviouslyApplied(mixin:any, superClass:any) {
+function wasMixinPreviouslyApplied(mixin: any, superClass: any) {
   let klass = superClass;
   while (klass) {
     if (appliedClassMixins.get(klass) === mixin) {
@@ -25,7 +25,9 @@ type Constructor<T = {}> = new (...args: unknown[]) => T;
  * @param {function} mixin      Mixin to be applied
  * @returns {function}          Function to apply the mixin to a class
  */
-export function dedupeMixin<T extends Constructor>(mixin: (superClass: T) => T) {
+export function dedupeMixin<T extends Constructor>(
+  mixin: (superClass: T) => T
+) {
   return (superClass: T): T => {
     if (wasMixinPreviouslyApplied(mixin, superClass)) {
       return superClass;

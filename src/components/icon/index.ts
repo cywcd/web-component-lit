@@ -158,6 +158,6 @@ export default class YcIcon extends LitElement {
   }
 
   override render() {
-    return html`<i class="${this.classListStr}"></i>`
+    return html`<i class="${this.classListStr}"></i>`;
   }
 }

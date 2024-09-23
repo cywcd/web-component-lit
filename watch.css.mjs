@@ -1,12 +1,15 @@
 import { watch } from 'chokidar';
 import { existsSync, readdirSync, statSync, writeFile, unlink } from 'fs';
-console.log('start');
+import { processString } from 'uglifycss';
+import postcss from 'postcss';
+import tailwindcss from 'tailwindcss';
+import chalk from 'chalk';
+
 const matchReg = /\.scss$/;
 const cache = new Map();
 const dir = './src/components';
 import { join as _join } from 'path';
 var join = _join;
-import { processString } from 'uglifycss';
 
 import * as sass from 'sass';
 
@@ -38,19 +41,26 @@ function getCssFiles(jsonPath) {
 }
 
 const writeCssToFile = (filePath) => {
-  setTimeout(function () {
+  setTimeout(async function () {
     try {
       let result = sass.compile(filePath);
-      const cssContent = escapeContent(result.css.toString());
+      let cssContent = escapeContent(result.css.toString());
+
+      // postcss编译
+      const postcssResult = await postcss([
+        tailwindcss(),
+      ]).process(cssContent, { from: filePath });
+      cssContent = escapeContent(postcssResult.css.toString());
+      // console.log(postcssResult, '---postcssResult');
       let cssContentMin = processString(cssContent);
       var oldData = cache.get(filePath);
       const d = `import {css} from 'lit';\nexport default css\`${cssContentMin}\`; `;
       if (oldData == undefined || oldData != d) {
         writeFile(filePath + '.ts', d, function (err) {
           if (!err) {
-            console.log(`write css to ${filePath + '.ts'} success `);
+            console.log(chalk.green(`write css to ${filePath + '.ts'} success `));
           } else {
-            console.warn(`write css to ${filePath + '.ts'} fail `)
+            console.warn(chalk.yellowBright(`write css to ${filePath + '.ts'} fail `));
           }
         });
       }
@@ -69,6 +79,7 @@ cssFiles.forEach((filePath) => {
     writeCssToFile(filePath);
   }
 });
+console.log('css watch...');
 
 
 
@@ -82,7 +93,7 @@ watch(dir, {
 }).on('unlink', (filepath) => {
   unlink(filepath + '.ts', (error) => {
     if (!error) {
-      console.log('delete file  success ');
+      console.log('delete file success ');
     }
 
   });

@@ -1,6 +1,6 @@
 ---
 layout: page.11ty.cjs
-title: <my-element> ⌲ Home
+title: yc web components ⌲ Home
 ---
 
 # &lt;my-element>

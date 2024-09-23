@@ -6,11 +6,11 @@
     <title>&lt;my-element> Demo</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script src="../node_modules/lit/polyfill-support.js"></script>
-    <!-- <script src="../lib/umd/index.umd.js"></script> -->
-    <script type="module">
+    <script src="../lib/umd/index.umd.js"></script>
+    <!-- <script type="module">
       // import '../lib/esm/index.js';
       import '../lib/umd/index.umd.js';
-    </script>
+    </script> -->
     <script>
       function openDialog() {
         // const elDialog = document.querySelector('[data-class="test-dialog"]');
@@ -18,7 +18,7 @@
         // const elDialog = document.querySelector('[data-class="test-dialog"]');
         // elDialog.open = true;
         console.log(window, '--openDialog-window');
-        const ycDialog = window.yssWebC.$ycDialog;
+        const ycDialog = window.ycWebC.$ycDialog;
         ycDialog.confirm({
           title: "米好",
           content: "hello mihao"

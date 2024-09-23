@@ -1,5 +1,5 @@
 type ListenerResult = {
-    destory: () => void;
+  destory: () => void;
 };
 /**
  * @returns 返回一个对象，可以删除监听
@@ -8,13 +8,18 @@ type ListenerResult = {
  * @param listener 监听
  * @param options 事件监听options
  */
-const addEvent = (el: Element | SVGAElement, event: string, listener: EventListener, options?: boolean | AddEventListenerOptions): ListenerResult => {
-    el.addEventListener(event, listener, options);
-    return {
-        destory: () => {
-            el.removeEventListener(event, listener, options);
-        }
-    };
+const addEvent = (
+  el: Element | SVGAElement,
+  event: string,
+  listener: EventListener,
+  options?: boolean | AddEventListenerOptions
+): ListenerResult => {
+  el.addEventListener(event, listener, options);
+  return {
+    destory: () => {
+      el.removeEventListener(event, listener, options);
+    },
+  };
 };
 
 /**
@@ -23,15 +28,20 @@ const addEvent = (el: Element | SVGAElement, event: string, listener: EventListe
  * @param delay 多少时间调用一次
  * @param scope 函数执行上下文
  */
-const throttle = (method: (...arg: unknown[]) => void , delay: number, scope?: unknown) => {
-    let begin = new Date().getTime();
-    return function (this: unknown, ...args: unknown[]) {
-        const context = scope != null ? scope : this, current = new Date().getTime();
-        if (current - begin >= delay) {
-            method.apply(context, args);
-            begin = current;
-        }
-    };
+const throttle = (
+  method: (...arg: unknown[]) => void,
+  delay: number,
+  scope?: unknown
+) => {
+  let begin = new Date().getTime();
+  return function (this: unknown, ...args: unknown[]) {
+    const context = scope != null ? scope : this,
+      current = new Date().getTime();
+    if (current - begin >= delay) {
+      method.apply(context, args);
+      begin = current;
+    }
+  };
 };
 
 /**
@@ -41,17 +51,21 @@ const throttle = (method: (...arg: unknown[]) => void , delay: number, scope?: u
  * @param wait
  * @param scope
  */
-const debounce = (method: (...arg: unknown[]) => void, wait: number, scope?: unknown) => {
-    let timeout: number;
-    return function (this: unknown, ...args: unknown[]) {
-        const context = scope != null ? scope : this;
-        if (timeout) {
-            clearTimeout(timeout);
-        }
-        timeout = window.setTimeout(() => {
-            method.apply(context, args);
-        }, wait);
-    };
+const debounce = (
+  method: (...arg: unknown[]) => void,
+  wait: number,
+  scope?: unknown
+) => {
+  let timeout: number;
+  return function (this: unknown, ...args: unknown[]) {
+    const context = scope != null ? scope : this;
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+    timeout = window.setTimeout(() => {
+      method.apply(context, args);
+    }, wait);
+  };
 };
 
 export {addEvent, debounce, throttle};

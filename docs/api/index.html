@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><my-element> ⌲ Docs</title>
+    <title>yc web components ⌲ Docs</title>
     <link rel="stylesheet" href="../docs.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Roboto+Mono">
     <link href="../prism-okaidia.css" rel="stylesheet" />
@@ -31,9 +31,9 @@
         
      <h1>API</h1>
      
-       <h2>&lt;my-element></h2>
+       <h2>&lt;yc-button></h2>
        <div>
-         An example element.
+         
        </div>
        
    <h3>Attributes</h3>
@@ -43,11 +43,59 @@
      </tr>
      
        <tr>
-         <td>name</td><td>The name to say "Hello" to.</td><td>string</td><td>'World'</td>
+         <td>disabled</td><td>是否禁用</td><td>boolean</td><td>false</td>
        </tr>
      
        <tr>
-         <td>count</td><td>The number of times the button has been clicked.</td><td>number</td><td>0</td>
+         <td>block</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>toggle</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td></td><td>buttonTypeValue</td><td>"primary"</td>
+       </tr>
+     
+       <tr>
+         <td>shape</td><td></td><td>shapeType</td><td>""</td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>value</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>checked</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>loading</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>href</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>target</td><td></td><td>targetType</td><td>'_blank'</td>
+       </tr>
+     
+       <tr>
+         <td>rel</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>download</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>icon</td><td></td><td>string</td><td></td>
        </tr>
      
    </table>
@@ -60,11 +108,419 @@
      </tr>
      
        <tr>
-         <td>name</td><td>name</td><td>The name to say "Hello" to.</td><td>string</td><td>'World'</td>
+         <td>disabled</td><td>disabled</td><td>是否禁用</td><td>boolean</td><td>false</td>
        </tr>
      
        <tr>
-         <td>count</td><td>count</td><td>The number of times the button has been clicked.</td><td>number</td><td>0</td>
+         <td>block</td><td>block</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>toggle</td><td>toggle</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td>type</td><td></td><td>buttonTypeValue</td><td>"primary"</td>
+       </tr>
+     
+       <tr>
+         <td>shape</td><td>shape</td><td></td><td>shapeType</td><td>""</td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td>name</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>value</td><td>value</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>checked</td><td>checked</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>loading</td><td>loading</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>href</td><td>href</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>target</td><td>target</td><td></td><td>targetType</td><td>'_blank'</td>
+       </tr>
+     
+       <tr>
+         <td>rel</td><td>rel</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>download</td><td>download</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>icon</td><td>icon</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>iconEl</td><td></td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>btn</td><td></td><td></td><td></td><td></td>
+       </tr>
+     
+   </table>
+   
+       
+           
+         
+       
+       
+       
+       <h2>&lt;yc-button-group></h2>
+       <div>
+         
+       </div>
+       
+   <h3>Attributes</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>value</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td></td><td>string</td><td></td>
+       </tr>
+     
+   </table>
+ 
+       
+   <h3>Properties</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>elements</td><td></td><td></td><td>NodeListOf<YcButton></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>value</td><td>value</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td>name</td><td></td><td>string</td><td></td>
+       </tr>
+     
+   </table>
+   
+       
+           
+         
+       
+       
+       
+       <h2>&lt;yc-dialog></h2>
+       <div>
+         
+       </div>
+       
+   <h3>Attributes</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>open</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>removeAble</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>autoclose</td><td></td><td>boolean</td><td>true</td>
+       </tr>
+     
+       <tr>
+         <td>loading</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>yc-title</td><td></td><td>string</td><td>'提示'</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td></td><td>DialogType</td><td>"dialog"</td>
+       </tr>
+     
+       <tr>
+         <td>okText</td><td></td><td>string | undefined</td><td>undefined</td>
+       </tr>
+     
+       <tr>
+         <td>showCancelBtn</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>cancelText</td><td></td><td>string | undefined</td><td>undefined</td>
+       </tr>
+     
+   </table>
+ 
+       
+   <h3>Properties</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>open</td><td>open</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>removeAble</td><td>removeAble</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>autoclose</td><td>autoclose</td><td></td><td>boolean</td><td>true</td>
+       </tr>
+     
+       <tr>
+         <td>loading</td><td>loading</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>title</td><td>yc-title</td><td></td><td>string</td><td>'提示'</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td>type</td><td></td><td>DialogType</td><td>"dialog"</td>
+       </tr>
+     
+       <tr>
+         <td>okText</td><td>okText</td><td></td><td>string | undefined</td><td>undefined</td>
+       </tr>
+     
+       <tr>
+         <td>showCancelBtn</td><td>showCancelBtn</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>cancelText</td><td>cancelText</td><td></td><td>string | undefined</td><td>undefined</td>
+       </tr>
+     
+       <tr>
+         <td>cancelBtn</td><td></td><td></td><td>YcButton | null</td><td>null</td>
+       </tr>
+     
+       <tr>
+         <td>btnActive</td><td></td><td></td><td>HTMLElement | null</td><td>null</td>
+       </tr>
+     
+       <tr>
+         <td>alert</td><td></td><td></td><td></td><td>function () {
+        const dialog = new YcDialog();
+        document.body.appendChild(dialog);
+        dialog.removeAble = true;
+        if (typeof arguments[0] === 'object') {
+            const { title, okText, content, ok } = arguments[0];
+            dialog.title = title || 'Alert';
+            dialog.okText = okText || '确 定';
+            dialog.onsubmit = ok || null;
+            dialog.innerHTML = content || '';
+        } else {
+            dialog.title = 'Alert';
+            dialog.okText = '确 定';
+            dialog.innerHTML = arguments[0] || '';
+            dialog.onsubmit = arguments[1] || null;
+        }
+        dialog.open = true;
+        return dialog;
+    }</td>
+       </tr>
+     
+       <tr>
+         <td>info</td><td></td><td></td><td></td><td>function () {
+        const dialog = new YcDialog();
+        document.body.appendChild(dialog);
+        dialog.type = 'info';
+        dialog.removeAble = true;
+        if (typeof arguments[0] === 'object') {
+            const { title, oktext, content, ok } = arguments[0];
+            dialog.title = title || 'Info';
+            dialog.okText = oktext || '知道了';
+            dialog.onsubmit = ok || null;
+            dialog.innerHTML = content || '';
+        } else {
+            dialog.title = 'Info';
+            dialog.okText = '知道了';
+            dialog.innerHTML = arguments[0] || '';
+            dialog.onsubmit = arguments[1] || null;
+        }
+        dialog.open = true;
+        return dialog;
+    }</td>
+       </tr>
+     
+       <tr>
+         <td>success</td><td></td><td></td><td></td><td>function () {
+        const dialog = new YcDialog();
+        document.body.appendChild(dialog);
+        dialog.type = 'success';
+        dialog.removeAble = true;
+        if (typeof arguments[0] === 'object') {
+            const { title, oktext, content, ok } = arguments[0];
+            dialog.title = title || 'Success';
+            dialog.okText = oktext || '知道了';
+            dialog.onsubmit = ok || null;
+            dialog.innerHTML = content || '';
+        } else {
+            dialog.title = 'Success';
+            dialog.okText = '知道了';
+            dialog.innerHTML = arguments[0] || '';
+            dialog.onsubmit = arguments[1] || null;
+        }
+        dialog.open = true;
+        return dialog;
+    }</td>
+       </tr>
+     
+       <tr>
+         <td>error</td><td></td><td></td><td></td><td>function () {
+        const dialog = new YcDialog();
+        document.body.appendChild(dialog);
+        dialog.type = 'error';
+        dialog.removeAble = true;
+        if (typeof arguments[0] === 'object') {
+            const { title, oktext, content, ok } = arguments[0];
+            dialog.title = title || 'Error';
+            dialog.okText = oktext || '知道了';
+            dialog.onsubmit = ok || null;
+            dialog.innerHTML = content || '';
+        } else {
+            dialog.title = 'Error';
+            dialog.okText = '知道了';
+            dialog.innerHTML = arguments[0] || '';
+            dialog.onsubmit = arguments[1] || null;
+        }
+        dialog.open = true;
+        return dialog;
+    }</td>
+       </tr>
+     
+       <tr>
+         <td>warning</td><td></td><td></td><td></td><td>function () {
+        const dialog = new YcDialog();
+        document.body.appendChild(dialog);
+        dialog.type = 'warning';
+        dialog.removeAble = true;
+        if (typeof arguments[0] === 'object') {
+            const { title, oktext, content, ok } = arguments[0];
+            dialog.title = title || 'Warning';
+            dialog.okText = oktext || '知道了';
+            dialog.onsubmit = ok || null;
+            dialog.innerHTML = content || '';
+        } else {
+            dialog.title = 'Warning';
+            dialog.okText = '知道了';
+            dialog.innerHTML = arguments[0] || '';
+            dialog.onsubmit = arguments[1] || null;
+        }
+        dialog.open = true;
+        return dialog;
+    }</td>
+       </tr>
+     
+       <tr>
+         <td>confirm</td><td></td><td></td><td></td><td>function () {
+        const dialog = new YcDialog();
+        document.body.appendChild(dialog);
+        dialog.updateComplete.then(() =>{
+            const cancelBtn: YcButton = dialog.cancelBtn as YcButton;
+            cancelBtn!.style.visibility = 'visible';
+        });
+        dialog.removeAble = true;
+        if (typeof arguments[0] === 'object') {
+            const { title, oktext, canceltext, type, content, ok } = arguments[0];
+            dialog.type = type || 'confirm';
+            dialog.title = title || 'confirm';
+            dialog.okText = oktext || '知道了';
+            dialog.cancelText = canceltext || '取消';
+            dialog.onsubmit = ok || null;
+            dialog.innerHTML = content || '';
+        } else {
+            dialog.type = 'confirm';
+            dialog.title = 'confirm';
+            dialog.okText = '确 定';
+            dialog.cancelText = '取 消';
+            dialog.innerHTML = arguments[0] || '';
+            dialog.onsubmit = arguments[1] || null;
+        }
+        dialog.open = true;
+        return dialog;
+    }</td>
+       </tr>
+     
+       <tr>
+         <td>prompt</td><td></td><td></td><td></td><td>function () {
+        const dialog = new YcDialog();
+        dialog.type = 'prompt';
+        document.body.appendChild(dialog);
+        dialog.updateComplete.then(() =>{
+            const cancelBtn: YcButton = dialog.cancelBtn as YcButton;
+            cancelBtn!.style.visibility = 'visible';
+        });
+        dialog.removeAble = true;
+        dialog.autoclose = false;
+        if (typeof arguments[0] === 'object') {
+            const { title, content, oktext, canceltext, ok, cancel } = arguments[0];
+            dialog.title = title || 'Prompt';
+            dialog.okText = oktext || '确 定';
+            dialog.cancelText = canceltext || '取 消';
+            dialog.innerHTML = content || '';
+            const input: YcInput = dialog.renderRoot.querySelector('yc-input') as YcInput;
+            input.onsubmit = dialog.onsubmit = () => {
+                const value = input.value;
+                if (value) {
+                    ok && ok(value);
+                    dialog.open = false;
+                } else {
+                    // XyMessage.error('内容不能为空');
+                    input.focus();
+                }
+            };
+            dialog.oncancel = cancel || null;
+        } else {
+            dialog.title = 'Prompt';
+            dialog.okText = '确 定';
+            dialog.cancelText = '取 消';
+            dialog.innerHTML = arguments[0] || '';
+            const input: YcInput = dialog.renderRoot.querySelector('yc-input') as YcInput;
+            input.onsubmit = dialog.onsubmit = () => {
+                const value = input.value;
+                if (value) {
+                    arguments[1] && arguments[1](value);
+                    dialog.open = false;
+                } else {
+                    //XyMessage.error('内容不能为空');
+                    input.focus();
+                }
+            };
+            dialog.oncancel = arguments[2] || null;
+        }
+        dialog.open = true;
+        return dialog;
+    }</td>
        </tr>
      
    </table>
@@ -77,7 +533,7 @@
      </tr>
      
        <tr>
-         <td>sayHello</td><td>
+         <td>typeMap</td><td>
    
    <table>
      <tr>
@@ -85,11 +541,23 @@
      </tr>
      
        <tr>
-         <td>name</td><td>The name to say "Hello" to</td><td>string</td>
+         <td>type</td><td></td><td>string</td>
        </tr>
      
    </table>
- </td><td>Formats a greeting</td><td>string</td>
+ </td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>submitBtnHandler</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>closeBtnHandler</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>cancelBtnHandler</td><td></td><td></td><td></td>
        </tr>
      
    </table>
@@ -102,37 +570,625 @@
      </tr>
      
        <tr>
-         <td>count-changed</td><td>Indicates when the count changes</td>
+         <td>submit</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>cancel</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>close</td><td></td>
        </tr>
      
    </table>
      
+         
        
-   <h3>Slots</h3>
+       
+       
+       <h2>&lt;yc-icon></h2>
+       <div>
+         
+       </div>
+       
+   <h3>Attributes</h3>
    <table>
      <tr>
-       <th>Name</th><th>Description</th>
+       <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
      </tr>
      
        <tr>
-         <td>(default)</td><td>This element has a slot</td>
+         <td>extClass</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>extStyle</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>color</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>size</td><td></td><td>string | number | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>spin</td><td></td><td>boolean | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>rotate</td><td></td><td>string | number | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>icon_prefix</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>hyphen</td><td></td><td>string | undefined</td><td>'-'</td>
+       </tr>
+     
+       <tr>
+         <td>iconStyle</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+   </table>
+ 
+       
+   <h3>Properties</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>extClass</td><td>extClass</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>extStyle</td><td>extStyle</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td>name</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>color</td><td>color</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>size</td><td>size</td><td></td><td>string | number | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>spin</td><td>spin</td><td></td><td>boolean | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>rotate</td><td>rotate</td><td></td><td>string | number | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>icon_prefix</td><td>icon_prefix</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>hyphen</td><td>hyphen</td><td></td><td>string | undefined</td><td>'-'</td>
+       </tr>
+     
+       <tr>
+         <td>iconStyle</td><td>iconStyle</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>iconClass</td><td></td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>classListStr</td><td></td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>iconStyles</td><td></td><td></td><td></td><td></td>
        </tr>
      
    </table>
    
        
-   <h3>CSS Shadow Parts</h3>
+   <h3>Methods</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+     </tr>
+     
+       <tr>
+         <td>setIconStyle</td><td>
+   
+   <table>
+     <tr>
+       <th>Name</th><th>Description</th><th>Type</th>
+     </tr>
+     
+       <tr>
+         <td>prefix</td><td></td><td>string</td>
+       </tr>
+     
+       <tr>
+         <td>fontFace</td><td></td><td>string</td>
+       </tr>
+     
+   </table>
+ </td><td></td><td></td>
+       </tr>
+     
+   </table>
+ 
+           
+         
+       
+       
+       
+       <h2>&lt;yc-input></h2>
+       <div>
+         
+       </div>
+       
+   <h3>Attributes</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>label</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>tips</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>errortips</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>disabled</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>readOnly</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td></td><td>inputtype</td><td>'text'</td>
+       </tr>
+     
+       <tr>
+         <td>placeholder</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>leftIcon</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>rightIcon</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>block</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>clear</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>debounce</td><td></td><td>number | undefined</td><td>undefined</td>
+       </tr>
+     
+       <tr>
+         <td>throttle</td><td></td><td>number | undefined</td><td>undefined</td>
+       </tr>
+     
+       <tr>
+         <td>showStep</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>value</td><td></td><td>string</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>invalid</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>novalidate</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>required</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>errorMessage</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>pattern</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>minLength</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>maxLength</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>min</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>max</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>step</td><td></td><td>number | undefined</td><td>1</td>
+       </tr>
+     
+   </table>
+ 
+       
+   <h3>Properties</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>label</td><td>label</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>tips</td><td>tips</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>errortips</td><td>errortips</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>disabled</td><td>disabled</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>readOnly</td><td>readOnly</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td>type</td><td></td><td>inputtype</td><td>'text'</td>
+       </tr>
+     
+       <tr>
+         <td>placeholder</td><td>placeholder</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>leftIcon</td><td>leftIcon</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>rightIcon</td><td>rightIcon</td><td></td><td>string | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>block</td><td>block</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>clear</td><td>clear</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>debounce</td><td>debounce</td><td></td><td>number | undefined</td><td>undefined</td>
+       </tr>
+     
+       <tr>
+         <td>throttle</td><td>throttle</td><td></td><td>number | undefined</td><td>undefined</td>
+       </tr>
+     
+       <tr>
+         <td>showStep</td><td>showStep</td><td></td><td>boolean | undefined</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>input</td><td></td><td></td><td>HTMLInputElement | unknown</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>form</td><td></td><td></td><td>HTMLFormElement | null</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>__debounceHander</td><td></td><td></td><td>() => void</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>__throttHander</td><td></td><td></td><td>() => void</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>NUMBERINPUTARRAY</td><td></td><td></td><td>string[]</td><td>['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.', '-']</td>
+       </tr>
+     
+       <tr>
+         <td>ycTips</td><td></td><td></td><td>YcTips</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>firstTypePassword</td><td></td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>name</td><td>name</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>value</td><td>value</td><td></td><td>string</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>invalid</td><td>invalid</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>novalidate</td><td>novalidate</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>required</td><td>required</td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>errorMessage</td><td>errorMessage</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>pattern</td><td>pattern</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>minLength</td><td>minLength</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>maxLength</td><td>maxLength</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>min</td><td>min</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>max</td><td>max</td><td></td><td>number</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>step</td><td>step</td><td></td><td>number | undefined</td><td>1</td>
+       </tr>
+     
+       <tr>
+         <td>customValidateMethod</td><td></td><td></td><td>CustomValidateMethode | undefined</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>validity</td><td></td><td></td><td>boolean</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>validityResult</td><td></td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>validationMessage</td><td></td><td></td><td>string</td><td></td>
+       </tr>
+     
+   </table>
+   
+       
+   <h3>Methods</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Parameters</th><th>Description</th><th>Return</th>
+     </tr>
+     
+       <tr>
+         <td>checkValidity</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>focus</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>reset</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>clearValue</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>searchValue</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>dispatchChange</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>dispatchFocus</td><td></td><td></td><td></td>
+       </tr>
+     
+       <tr>
+         <td>_dispatchInput</td><td></td><td></td><td></td>
+       </tr>
+     
+   </table>
+ 
+       
+   <h3>Events</h3>
    <table>
      <tr>
        <th>Name</th><th>Description</th>
      </tr>
      
        <tr>
-         <td>button</td><td>The button</td>
+         <td>submit</td><td></td>
+       </tr>
+     
+   </table>
+     
+         
+       
+       
+       
+       <h2>&lt;yc-loading></h2>
+       <div>
+         
+       </div>
+       
+   <h3>Attributes</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>size</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>color</td><td></td><td>string</td><td></td>
        </tr>
      
    </table>
  
+       
+   <h3>Properties</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>size</td><td>size</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>color</td><td>color</td><td></td><td>string</td><td></td>
+       </tr>
+     
+       <tr>
+         <td>loadingEl</td><td></td><td></td><td></td><td></td>
+       </tr>
+     
+   </table>
+   
+       
+           
+         
+       
+       
+       
+       <h2>&lt;yc-tips></h2>
+       <div>
+         
+       </div>
+       
+   <h3>Attributes</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>show</td><td></td><td>showType</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>tips</td><td></td><td>string</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>color</td><td></td><td>string</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td></td><td>typeType</td><td>'success'</td>
+       </tr>
+     
+       <tr>
+         <td>dir</td><td></td><td>dirType</td><td>'auto'</td>
+       </tr>
+     
+   </table>
+ 
+       
+   <h3>Properties</h3>
+   <table>
+     <tr>
+       <th>Name</th><th>Attribute</th><th>Description</th><th>Type</th><th>Default</th>
+     </tr>
+     
+       <tr>
+         <td>show</td><td>show</td><td></td><td>showType</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>tips</td><td>tips</td><td></td><td>string</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>color</td><td>color</td><td></td><td>string</td><td>''</td>
+       </tr>
+     
+       <tr>
+         <td>type</td><td>type</td><td></td><td>typeType</td><td>'success'</td>
+       </tr>
+     
+       <tr>
+         <td>dir</td><td>dir</td><td></td><td>dirType</td><td>'auto'</td>
+       </tr>
+     
+       <tr>
+         <td>_isAutoDir</td><td></td><td></td><td>boolean</td><td>false</td>
+       </tr>
+     
+       <tr>
+         <td>_autoHander</td><td></td><td></td><td>EventListenerOrEventListenerObject | undefined</td><td></td>
+       </tr>
+     
+   </table>
+   
+       
+           
+         
+       
        
        
    

@@ -89,7 +89,7 @@ export default [
     output: {
       dir: umdOutputDir,
       format: 'umd',
-      name: 'yss-lit-web-component',
+      name: 'yc-lit-web-component',
       sourcemap: true,
       entryFileNames: '[name].umd.js',
       exports: 'named', // 仅使用命名导出

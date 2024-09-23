@@ -1,10 +1,12 @@
-import { isPlainArray, isPlainObject, isString } from './commonBase';
+import {isPlainArray, isPlainObject, isString} from './commonBase';
 
 export const PREFIX = 'yc';
 
-function filterRealKey(obj: string[] | { [key: string]: any }): string[] | { [key: string]: any } {
+function filterRealKey(
+  obj: string[] | {[key: string]: any}
+): string[] | {[key: string]: any} {
   if (isPlainObject(obj)) {
-    return Object.keys(obj).filter(value => Boolean(obj[value]));
+    return Object.keys(obj).filter((value) => Boolean(obj[value]));
   }
   return obj;
 }
@@ -41,7 +43,9 @@ export function join(name: string, mods: any) {
 
   if (isPlainObject(mods)) {
     const array = filterRealKey(mods);
-    const res = array.map((mod: ConcatArray<string>) => arr.concat(mod).join('-'));
+    const res = array.map((mod: ConcatArray<string>) =>
+      arr.concat(mod).join('-')
+    );
     ret = res.join(' ');
   }
 
@@ -94,7 +98,9 @@ export function handle(name: string, mods: unknown): string {
 
   if (isPlainObject(mods)) {
     const array = filterRealKey(mods);
-    const res = array.map((mod: ConcatArray<string>) => arr.concat(mod).join('-'));
+    const res = array.map((mod: ConcatArray<string>) =>
+      arr.concat(mod).join('-')
+    );
     return res.join(' ');
   }
 

@@ -8,13 +8,13 @@ import YcDialog from './dialog';
 
 declare global {
   interface Window {
-    yssWebC: {
-        $ycDialog: typeof YcDialog;
-    }
+    ycWebC: {
+      $ycDialog: typeof YcDialog;
+    };
   }
 }
 
-window.yssWebC = window.yssWebC || {};
-window.yssWebC.$ycDialog = YcDialog;
+window.ycWebC = window.ycWebC || {};
+window.ycWebC.$ycDialog = YcDialog;
 
 export {};

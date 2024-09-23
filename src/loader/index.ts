@@ -1,5 +1,5 @@
-import "@webcomponents/webcomponentsjs/webcomponents-loader.js";
-import "lit/polyfill-support.js";
+import '@webcomponents/webcomponentsjs/webcomponents-loader.js';
+import 'lit/polyfill-support.js';
 
 declare global {
   // eslint-disable-next-line no-var, @typescript-eslint/no-explicit-any
@@ -11,4 +11,4 @@ function applyPolyfills() {
   window.WebComponents.root = 'node_modules/@webcomponents/webcomponentsjs/';
 }
 
-export { applyPolyfills };
+export {applyPolyfills};
