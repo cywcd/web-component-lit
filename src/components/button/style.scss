@@ -1,3 +1,5 @@
+@import '../theme/common/var.scss';
+
 :host {
   position: relative;
   display: inline-flex;
@@ -40,19 +42,19 @@
 :host(:not([type="primary"]):not([type="danger"]):not([disabled]):hover),
 :host(:not([type="primary"]):not([type="danger"]):focus-within),
 :host([type="flat"][focus]) {
-  color: var(--themeColor, #3371FF);
-  border-color: var(--themeColor, #3371FF);
+  color: var(--themeColor, $--color-primary);
+  border-color: var(--themeColor, $--color-primary);
 }
 :host(:not([type="primary"]):not([type="danger"])) .btn::after {
   background-image: radial-gradient(
       circle,
-      var(--themeColor, #3371FF) 10%,
+      var(--themeColor, $--color-primary) 10%,
       transparent 10.01%
   );
 }
 :host([type="primary"]) {
   color: #fff;
-  background: var(--themeBackground, var(--themeColor, #3371FF));
+  background: var(--themeBackground, var(--themeColor, $--color-primary));
 }
 :host([type="danger"]) {
   color: #fff;
@@ -70,7 +72,7 @@
 :host([type="flat"]) .btn::before {
   content: "";
   position: absolute;
-  background: var(--themeColor, #3371FF);
+  background: var(--themeColor, $--color-primary);
   pointer-events: none;
   left: 0;
   right: 0;

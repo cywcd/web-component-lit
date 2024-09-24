@@ -1,3 +1,5 @@
+@import '../theme/common/var.scss';
+
 :host {
     display: inline-block;
     border: 1px solid var(--borderColor, rgba(0, 0, 0, 0.2));
