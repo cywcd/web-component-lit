@@ -64,8 +64,8 @@ const writeCssToFile = (filePath) => {
           }
         });
       }
-    } catch (ex) {
-      console.error(ex);
+    } catch (err) {
+      console.error(chalk.bgRed('css 编译异常:'), `${err}`);
     }
   }, 100);
 

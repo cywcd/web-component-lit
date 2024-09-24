@@ -1,12 +1,71 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="zh">
   <head>
-    <meta charset="utf-8" />
-    <title>Lit Starter Kit</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dev/static/style/dev-main.css" rel="stylesheet" />
+    <title>yc web components</title>
   </head>
-  <body>
-    <a href="/dev/index.html">Component Demo</a>
-    
+  <body class="yc-demo-body flex h-screen">
+    <div
+      id="yc-demo-sidebar"
+      class="yc-demo-sidebar bg-gray-800 text-white w-48 transition-width duration-300 relative"
+    >
+      <div class="yc-demo-topbar">
+        <div class="yc-demo-title h-8 flex flex-1 items-center justify-center text-blue-500 font-bold truncate">yc组件demo</div>
+        <div
+            id="web-toggle-container"
+            onclick="toggleSidebar()"
+            class="hover:bg-gray-700 rounded"
+        >
+            <span class="p-1 rounded text-white">
+            <img
+                id="yc-demo-toggle-icon"
+                src="./dev/static/img/expand.svg"
+                alt="Toggle"
+                class="w-5 h-5"
+            />
+            </span>
+        </div>
+      </div>
+      <div class="yc-demo-menu">
+        <ul class="yc-demo-menu-list overflow-y-auto">
+          <li
+            class="yc-demo-menu-list-item cursor-pointer border-b border-gray-700"
+            title="官方示例 my-element"
+            data-url="./dev/demo/my-element.html"
+            onclick="changePage(event)"
+          >
+            <span class="block p-2 hover:bg-gray-700 truncate">官方示例 my-element</span>
+          </li>
+          <li 
+            class="yc-demo-menu-list-item cursor-pointer border-b border-gray-700"
+            title="按钮 yc-button"
+            data-url="./dev/demo/yc-button.html"
+            onclick="changePage(event)"
+          >
+            <span class="block p-2 hover:bg-gray-700 truncate">按钮 yc-button</span>
+          </li>
+          <li 
+            class="yc-demo-menu-list-item cursor-pointer border-b border-gray-700"
+            title="图标 yc-icon"
+            data-url="./dev/demo/yc-icon.html"
+            onclick="changePage(event)"
+          >
+            <span class="block p-2 hover:bg-gray-700 truncate">图标 yc-icon</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="yc-demo-wraper flex-1 bg-gray-100 p-4">
+      <iframe
+        id="components-demo-iframe"
+        class="w-full h-full flex-1"
+        src="./dev/site/loading.html"
+      ></iframe>
+    </div>
+
+    <script src="./dev/static/js/dev-main.js">
+    </script>
   </body>
 </html>

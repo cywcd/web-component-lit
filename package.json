@@ -16,7 +16,7 @@
     "css:watch": "node watch.css.mjs",
     "css:tailwind": "tailwindcss build ./src/components/theme/tailwind/main.css -o ./src/components/theme/tailwind/dist/tailwind.css --minify",
     "css:tailwind:watch": "yarn css:tailwind --watch",
-    "dev": "concurrently \"yarn serve\" \"yarn tsc:watch\" \"yarn build:watch\" \"yarn css:watch\"",
+    "dev": "concurrently \"yarn clean && yarn serve\" \"yarn tsc:watch\" \"yarn css:watch\"",
     "clean": "rimraf lib",
     "lint": "yarn lint:lit-analyzer && yarn lint:eslint",
     "lint:eslint": "eslint 'src/**/*.ts'",

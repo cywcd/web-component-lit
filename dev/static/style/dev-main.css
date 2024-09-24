@@ -1,0 +1,34 @@
+/* 开发组件展示demo主样式 */
+
+@import '../../../src/components/theme/tailwind/dist/tailwind.css';
+
+#web-toggle-container {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+  transition: right 0.3s;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.yc-demo-menu {
+  height: calc(100vh - 2rem);
+}
+
+.yc-demo-menu-list {
+  max-height: 100%;
+}
+
+/* 美化滚动条样式 */
+.yc-demo-menu-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.yc-demo-menu-list::-webkit-scrollbar-thumb {
+  background-color: #718096;
+  border-radius: 10px;
+}
+
+.yc-demo-menu-list::-webkit-scrollbar-track {
+  background: #a0aec0;
+}

@@ -1,3 +1,4 @@
+import './demo';
 import './icon';
 import './loading';
 import './button';
