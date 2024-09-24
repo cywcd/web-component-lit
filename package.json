@@ -14,7 +14,7 @@
     "tsc": "tsc",
     "tsc:watch": "tsc --watch",
     "css:watch": "node watch.css.mjs",
-    "css:tailwind": "tailwindcss -i ./src/components/theme/tailwind/main.css -o ./src/components/theme/tailwind/dist/tailwind.css --minify",
+    "css:tailwind": "tailwindcss build ./src/components/theme/tailwind/main.css -o ./src/components/theme/tailwind/dist/tailwind.css --minify",
     "css:tailwind:watch": "yarn css:tailwind --watch",
     "dev": "concurrently \"yarn serve\" \"yarn tsc:watch\" \"yarn build:watch\" \"yarn css:watch\"",
     "clean": "rimraf lib",
@@ -86,7 +86,7 @@
     "rollup-plugin-svg": "^2.0.0",
     "sass": "^1.77.8",
     "shx": "^0.3.4",
-    "tailwindcss": "^3.4.12",
+    "tailwindcss": "1.9.6",
     "typescript": "~5.5.0",
     "uglifycss": "^0.0.29"
   },
